@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClickController;
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -18,6 +19,8 @@ Route::get('dashboard', function () {
 Route::get('phishedlist', function () {
     return Inertia::render('Phished List');
 })->middleware(['auth', 'verified'])->name('phishedlist');
+
+Route::get('/track', [ClickController::class, 'trackClick'])->name('track');
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
