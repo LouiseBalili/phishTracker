@@ -62,7 +62,7 @@ const props = defineProps({
             </div>
 
             <!-- Pagination -->
-            <pagination :data="clicks" />
+            <!-- <pagination :data="clicks" /> -->
 
         </div>
         
